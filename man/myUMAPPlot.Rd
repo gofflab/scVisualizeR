@@ -4,8 +4,16 @@
 \alias{myUMAPPlot}
 \title{Given an exisiting UMAP embedding of scRNAseq data, returns UMAP embedding colored by the relative expression of marker genes of interest}
 \usage{
-myUMAPPlot(cds, markers = NULL, logMode = T, color_by = "Cluster",
-  alpha = 0.5, shape_by = NULL, scaled = FALSE, size = 1)
+myUMAPPlot(
+  cds,
+  markers = NULL,
+  logMode = T,
+  color_by = "Cluster",
+  alpha = 0.5,
+  shape_by = NULL,
+  scaled = FALSE,
+  size = 1
+)
 }
 \arguments{
 \item{cds}{a cell data set}

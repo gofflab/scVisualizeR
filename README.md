@@ -17,6 +17,9 @@ Install scVisualizeR using the following:
 library(devtools)
 install_github('jaugust7/scVisualizeR')
 ```
+
+For a vignette on some of **scVisualizeR**'s functionality, see the [vignette](https://github.com/gofflab/scVisualizer/blob/master/vignettes/vignette.html) 
+
 Note: This package is still in development and was designed to make my life easier. It may need tweaking in order to work on your system. I'll add updates as I'm made aware of bugs that prevent it working on other setups.
 
 Cheers!

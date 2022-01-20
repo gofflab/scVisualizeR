@@ -8,5 +8,5 @@ Depends: R (>= 3.5.1)
 License: Johns Hopkins Medical Institute
 LazyData: true
 Encoding: UTF-8
-RoxygenNote: 6.1.1
-Imports: viridis, ggplot2, monocle, umap, NNLM, Matrix
+RoxygenNote: 7.1.1
+Imports: viridis, ggplot2, monocle, umap, NNLM, Matrix, dplyr

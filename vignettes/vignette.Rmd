@@ -1,0 +1,72 @@
+---
+title: "scVisualizeR Vignette"
+
+date: "`r BiocStyle::doc_date()`"
+
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{scVisualizer Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 1, digits = 2)
+set.seed(1234)
+```
+
+```{r, echo = F, message = F}
+library(here)
+```
+
+# Getting started with scVisualizeR
+
+## Installation Instructions
+
+```
+devtools:install_github("gofflab/scVisualizeR")
+```
+
+## Modified Monocle3 plotting
+
+The function plot_cells_mod is a modified version of plot_cells with two major changes:
+- It allows for flexibility in plotting reduced dimensions that are named differently than the monocle3 standard
+- It introduces outlining/underplotting of cells. This can be an aesthetic choice in a standard plot or a useful choice to show the entire embedding after faceting.
+
+```
+library(monocle3)
+library(scVisualizer)
+
+plot_cells(cds, reduced_dimension = "my_custom_embedding")
+
+```
+
+```
+plot_cells(cds, label_cell_groups = F)
+plot_cells_mod(cds, outline_cells = T, outline_cell_size = 0.65,
+               outline_cell_color = "black", label_cell_groups = F)
+```
+
+```{r, echo=FALSE,out.width="80%",out.height="20%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(here("vig_data/figs/standard_outline.png"), here("vig_data/figs/modified_outline.png")))
+``` 
+
+```
+plot_cells(cds, color_cells_by = "age", label_cell_groups = R) +
+  facet_wrap(~age)
+plot_cells_mod(cds, outline_cells = T, outline_cell_size = 0.35,
+               outline_cell_color = "grey80", label_cell_groups) +
+  facet_wrap(~age)
+```
+
+```{r, echo=FALSE,out.width="80%",out.height="20%",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c(here("vig_data/figs/standard_facet.png"), here("vig_data/figs/modified_facet.png")))
+
+``` 
+
+
+
+

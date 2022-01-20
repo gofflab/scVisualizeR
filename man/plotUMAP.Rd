@@ -4,8 +4,11 @@
 \alias{plotUMAP}
 \title{Generate a UMAP visualiztion using ggplot2}
 \usage{
-plotUMAP(cds, cell_color = "color", scale_color = c("#377EB8",
-  "#4DAF4A", "#E41A1C"))
+plotUMAP(
+  cds,
+  cell_color = "color",
+  scale_color = c("#377EB8", "#4DAF4A", "#E41A1C")
+)
 }
 \arguments{
 \item{cds}{a cell data set}

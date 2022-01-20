@@ -4,8 +4,14 @@
 \alias{plotPatterns}
 \title{Returns UMAP visualizations colored by pattern weight as determined by NNLM::nnmf()}
 \usage{
-plotPatterns(eset, decomp, nPatterns = c(1:5), x_cord = "UMAP1",
-  y_cord = "UMAP2", size = 0.5)
+plotPatterns(
+  eset,
+  decomp,
+  nPatterns = c(1:5),
+  x_cord = "UMAP1",
+  y_cord = "UMAP2",
+  size = 0.5
+)
 }
 \arguments{
 \item{eset}{an expression set or cell data set (CDS)}
